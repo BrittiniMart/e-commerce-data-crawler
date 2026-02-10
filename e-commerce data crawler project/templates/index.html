@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Data Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .search-form {
+            margin: 30px 0;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .info-box {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .platform-filter {
+            margin: 15px 0;
+            text-align: center;
+        }
+        .platform-filter a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 8px 15px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        .platform-filter a:hover, .platform-filter a.active {
+            background: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 E-commerce Data Dashboard</h1>
+        
+        <div class="info-box">
+            <h3>About This System</h3>
+            <p>This system collects and analyzes product data from multiple e-commerce platforms including Amazon and JD.com. Use the search below to find products and view analytics.</p>
+        </div>
+        
+        <div class="search-form">
+            <form action="/search" method="get">
+                <input type="text" name="keyword" placeholder="Enter product keyword (e.g., laptop, phone, watch)" required>
+                <button type="submit">Search Products</button>
+            </form>
+        </div>
+        
+        <div class="platform-filter">
+            <strong>Filter by Platform:</strong>
+            <a href="/search?keyword=laptop&platform=amazon">Amazon</a>
+            <a href="/search?keyword=laptop&platform=jd">JD.com</a>
+            <a href="/search?keyword=laptop&platform=all" class="active">All Platforms</a>
+        </div>
+        
+        <div style="margin-top: 40px;">
+            <h3>Quick Search Examples:</h3>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="/search?keyword=laptop"><button>💻 Laptops</button></a>
+                <a href="/search?keyword=phone"><button>📱 Phones</button></a>
+                <a href="/search?keyword=watch"><button>⌚ Watches</button></a>
+                <a href="/search?keyword=camera"><button>📷 Cameras</button></a>
+                <a href="/search?keyword=headphones"><button>🎧 Headphones</button></a>
+            </div>
+        </div>
+        
+        <div style="margin-top: 40px; font-size: 14px; color: #666;">
+            <p><strong>System Features:</strong></p>
+            <ul>
+                <li>Multi-platform data collection (Amazon & JD.com)</li>
+                <li>Price distribution analysis</li>
+                <li>Review sentiment scoring</li>
+                <li>Real-time search and filtering</li>
+                <li>Interactive web dashboard</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
